@@ -46,7 +46,7 @@ const nunito = Nunito({
 
 export default function Page() {
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 ">
       <div className="col-span-2">
         <div className="mt-8 ml-10 flex flex-row">
           <form class="max-w-lg">
@@ -418,7 +418,7 @@ export default function Page() {
               Daily Work
             </h2>
           </div>
-          <div className="rounded-2xl bg-white ml-[31px] mt-2.5 mr-[39px] p-1.5 pb-[20px] mb-12">
+          <div className="rounded-2xl bg-white ml-[31px] mt-2.5 mr-[39px] p-1.5 pb-[21px] mb-10">
             <h2 className="mt-2.5 ml-[22px] font-semibold text-xl text-[#27A857] ">
               Books this week
             </h2>

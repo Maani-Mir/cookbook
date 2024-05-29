@@ -50,7 +50,7 @@ export default function LeftSideBar() {
       </div>
       <div className={nunito.className}>
         <div>
-          <div className="ml-5 mr-3 mt-28">
+          <div className="ml-5 mr-3 mt-[159px]">
             {links.map((link) => {
               const LinkIcon = link.icon;
               const isActive = pathname === link.href;

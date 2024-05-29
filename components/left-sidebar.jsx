@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
 import logo from "@/content/images/logo.svg";
 import reader from "@/content/images/reading-man.svg";
+import { Nunito } from "next/font/google";
 
 const links = [
   { name: "Home", href: "/dashboard/home", icon: HomeIcon },
@@ -31,6 +32,10 @@ const links = [
   },
 ];
 
+const nunito = Nunito({
+  subsets: ["latin"],
+});
+
 export default function LeftSideBar() {
   const pathname = usePathname();
   return (
@@ -43,26 +48,39 @@ export default function LeftSideBar() {
           className="ml-[64px] mt-[20px]"
         />
       </div>
-      <div>
-        <div className="ml-3 mr-2 mt-32">
-          {links.map((link) => {
-            const LinkIcon = link.icon;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={clsx(
-                  "text-md text-[#ABB5BA] font-medium hover:text-white flex justify-start items-center gap-8 pl-4 hover:bg-[#EB763C] pt-4 pb-4 mt-4 rounded-full cursor-pointer",
-                  {
-                    "bg-[#EB763C] text-slate-50": pathname === link.href,
-                  }
-                )}
-              >
-                <LinkIcon className="w-7 rounded-full" />
-                <p className="hidden md:block ">{link.name}</p>
-              </Link>
-            );
-          })}
+      <div className={nunito.className}>
+        <div>
+          <div className="ml-5 mr-3 mt-28">
+            {links.map((link) => {
+              const LinkIcon = link.icon;
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={clsx(
+                    "text-sm text-[#ABB5BA] font-semibold hover:text-white flex justify-start items-center gap-6 pl-3 hover:bg-[#EB763C] pt-3 pb-3 mt-3 rounded-full cursor-pointer",
+                    {
+                      "bg-[#EB763C] text-slate-50 rounded-full":
+                        pathname === link.href,
+                    }
+                  )}
+                >
+                  <LinkIcon
+                    className={clsx(
+                      "w-[33px] rounded-full bg-white p-[3px] hover:bg-[#EB763C]",
+                      {
+                        "fill-current text-[#EB763C] ": pathname === link.href,
+                        "group-hover:fill-current group-hover:text-[#EB763C]":
+                          !isActive,
+                      }
+                    )}
+                  />
+                  <p className="hidden md:block ">{link.name}</p>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
       <div>

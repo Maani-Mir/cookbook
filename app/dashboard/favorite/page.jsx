@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Page() {
-  return <div>Favorite Page</div>;
+  return <div className="text-black">Favorite Page</div>;
 }

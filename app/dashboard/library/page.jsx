@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Page() {
-  return <div>Library Page</div>;
+  return <div className="text-black">Library Page</div>;
 }

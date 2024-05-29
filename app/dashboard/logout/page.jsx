@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Page() {
-  return <div>Logout Page</div>;
+  return <div className="text-black">Logout Page</div>;
 }

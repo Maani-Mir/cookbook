@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Page() {
-  return <div>Categories Page</div>;
+  return <div className="text-black">Categories Page</div>;
 }

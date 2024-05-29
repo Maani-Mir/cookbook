@@ -61,8 +61,7 @@ export default function LeftSideBar() {
                   className={clsx(
                     "text-sm text-[#ABB5BA] font-semibold hover:text-white flex justify-start items-center gap-6 pl-3 hover:bg-[#EB763C] pt-3 pb-3 mt-3 rounded-full cursor-pointer",
                     {
-                      "bg-[#EB763C] text-slate-50 rounded-full":
-                        pathname === link.href,
+                      "bg-[#EB763C] text-slate-50 rounded-full": isActive,
                     }
                   )}
                 >
@@ -70,9 +69,8 @@ export default function LeftSideBar() {
                     className={clsx(
                       "w-[33px] rounded-full bg-white p-[3px] hover:bg-[#EB763C]",
                       {
-                        "fill-current text-[#EB763C] ": pathname === link.href,
-                        "group-hover:fill-current group-hover:text-[#EB763C]":
-                          !isActive,
+                        "fill-current text-[#EB763C] ": isActive,
+                        "hover:fill-current hover:text-[#EB763C]": !isActive,
                       }
                     )}
                   />

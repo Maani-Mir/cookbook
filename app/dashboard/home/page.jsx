@@ -418,7 +418,7 @@ export default function Page() {
               Daily Work
             </h2>
           </div>
-          <div className="rounded-2xl bg-white ml-[31px] mt-2.5 mr-[39px] p-1.5 pb-[21px] mb-10">
+          <div className="rounded-2xl bg-white ml-[31px] mt-2.5 mr-[39px] p-1.5 pb-[21px] mb-10 shadow-lg">
             <h2 className="mt-2.5 ml-[22px] font-semibold text-xl text-[#27A857] ">
               Books this week
             </h2>

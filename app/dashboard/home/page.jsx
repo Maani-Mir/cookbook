@@ -47,7 +47,7 @@ const nunito = Nunito({
 export default function Page() {
   return (
     <div className="grid grid-cols-3 ">
-      <div className="col-span-2">
+      <div className="col-span-2 ml-8 h-screen">
         <div className="mt-8 ml-10 flex flex-row">
           <form class="max-w-lg">
             <label
@@ -60,12 +60,12 @@ export default function Page() {
               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"></div>
               <div className={nunito.className}>
                 <input
-                  class="block w-full p-3 pr-[19rem]  ps-10 text-lg font-semibold rounded-full bg-[#ECF0F3] text-[#B2BAC8] dark:text-slate-900 "
+                  class="block w-[550px] p-3 pr-[20rem]  pl-8 text-lg font-semibold rounded-full bg-[#ECF0F3] text-[#B2BAC8] dark:text-slate-900 "
                   placeholder="Search your book..."
                   required
                 />
                 <svg
-                  class="absolute end-2.5 top-1.5 bottom-[12px] w-10 h-10 pl-1 pt-2 pb-1 text-[#27A857] bg-white rounded-full"
+                  class="absolute -end-7 top-1.5 bottom-[12px] w-10 h-10 pl-1 pt-2 pb-1 text-[#27A857] bg-white rounded-full"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -82,60 +82,59 @@ export default function Page() {
               </div>
             </div>
           </form>
-          <div className="text-[#212121] font-bold text-xl mt-2.5 ml-48">
+          <div className="text-[#212121] font-bold text-xl mt-3 ml-96 justify-items-end">
             EN
           </div>
           <div className="ml-3 rounded-full bg-[#D3F8D8] p-2 mw-11 mh-11">
             <Image src={britainonly} />
           </div>
         </div>
-        <div className="flex ml-10 mt-8 pl-[53px] pt-9 rounded-3xl bg-[#1AA928]">
-          <div className="relative isolate flex-auto text-left mx-0">
-            <h2 className="text-3xl tracking-wider font-bold text-white font-serif">
-              TRENDING BOOKS
-            </h2>
-            <h2 className="text-3xl tracking-wider font-bold text-white mt-1 font-serif">
-              THIS MONTH
-            </h2>
-            <div className={nunito.className}>
-              <p className="mt-6 text-lg font-normal leading-8 text-[#DCE0E5]">
-                Listen to trending books in this months
-              </p>
-            </div>
-            <div className="mt-11 mb-[60px] justify-start">
+        <div className=" flex ml-10 mt-8 pt-9 rounded-3xl bg-[#1AA928]">
+          <Image className="absolute object-contain w-[54%]" src={whitewavy} />
+          <div className="flex-1 flex-grow relative">
+            <div className="relative ml-10">
+              <h2 className="text-3xl tracking-wider font-bold text-white font-serif">
+                TRENDING BOOKS
+              </h2>
+              <h2 className="text-3xl tracking-wider font-bold text-white mt-1 font-serif">
+                THIS MONTH
+              </h2>
               <div className={nunito.className}>
-                <Link
-                  href="#"
-                  className=" text-sm rounded-full bg-[#EB763C] pt-4.5 px-7 py-3 font-extrabold text-center text-[#FFFFFF] "
-                >
-                  VIEW NOW
-                </Link>
+                <p className="mt-6 text-lg font-normal leading-8 text-[#DCE0E5]">
+                  Listen to trending books in this months
+                </p>
+              </div>
+              <div className="mt-11 mb-[60px] justify-start">
+                <div className={nunito.className}>
+                  <Link
+                    href="#"
+                    className=" text-sm rounded-full bg-[#EB763C] pt-4.5 px-7 py-3 font-extrabold text-center text-[#FFFFFF] "
+                  >
+                    VIEW NOW
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div className=" ">
-            <Image
-              className="absolute right-[417px] w-[804px]"
-              src={whitewavy}
-            />
-          </div>
-          <div className="flex-auto relative ">
-            <Image
-              className="relative left-[151px] mt-[45px] w-28"
-              src={dancingman}
-            />
-          </div>
-          <div className="flex-auto relative ">
-            <Image
-              className="relative right-[68px] w-[291px]"
-              src={flyingbooks}
-            />
-          </div>
-          <div className=" ">
-            <Image
-              className="absolute mt-6 right-[553px] w-[118px]"
-              src={hearts}
-            />
+          <div>
+            <div className="flex-auto relative ">
+              <Image
+                className="absolute left-[151px] mt-[45px] w-28"
+                src={dancingman}
+              />
+            </div>
+            <div className="flex-auto relative ">
+              <Image
+                className="relative right-[68px] w-[291px]"
+                src={flyingbooks}
+              />
+            </div>
+            <div className=" ">
+              <Image
+                className="relative mt-6 right-[553px] w-[118px]"
+                src={hearts}
+              />
+            </div>
           </div>
         </div>
         <div className={nunito.className}>
@@ -216,7 +215,7 @@ export default function Page() {
                 View all
               </Link>
             </div>
-            <div className="flex flex-row">
+            <div className="grid grid-cols-6">
               <div>
                 <div className="mt-5 ml-14 ">
                   <Image
@@ -262,13 +261,13 @@ export default function Page() {
                 </h3>
               </div>
               <div>
-                <div className="mt-5 ml-9">
+                <div className="mt-5 ml-16">
                   <Image
                     src={rowling}
                     className="rounded-full ring-offset-2 ring-2 ring-[#27A857]"
                   />
                 </div>
-                <h3 className="ml-[30px] text-[#434D56] mt-3 font-semibold text-base">
+                <h3 className="ml-[56px] text-[#434D56] mt-3 font-semibold text-base">
                   J.K Rowling
                 </h3>
               </div>
@@ -325,7 +324,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="ml-10 rounded-[40px] bg-[#E4FBE7] -mr-[7px]">
+      <div className="ml-36 rounded-[40px] bg-[#E4FBE7] ">
         <div className={nunito.className}>
           <div className="flex mt-9 ml-8">
             <div className="rounded-full bg-white p-3 pt-2">
@@ -341,10 +340,7 @@ export default function Page() {
           </div>
           <div className="rounded-2xl bg-white ml-[33px] mt-9 mr-[39px] shadow-lg">
             <div className="flex pt-6">
-              <Image
-                src={sidewavy}
-                className="absolute overflow-hidden  mt-9"
-              />
+              <Image src={sidewavy} className="absolute mt-9" />
               <Image src={sidegatsby} className="ml-5 mt-1.5 z-10" />
               <Image
                 src={sidewonder}

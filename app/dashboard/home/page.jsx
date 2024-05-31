@@ -89,54 +89,51 @@ export default function Page() {
             <Image src={britainonly} />
           </div>
         </div>
-        <div className=" flex ml-10 mt-8 pt-9 rounded-3xl bg-[#1AA928]">
-          <Image className="absolute object-contain w-[54%]" src={whitewavy} />
-          <div className="flex-1 flex-grow relative">
-            <div className="relative ml-10">
-              <h2 className="text-3xl tracking-wider font-bold text-white font-serif">
-                TRENDING BOOKS
-              </h2>
-              <h2 className="text-3xl tracking-wider font-bold text-white mt-1 font-serif">
-                THIS MONTH
-              </h2>
-              <div className={nunito.className}>
-                <p className="mt-6 text-lg font-normal leading-8 text-[#DCE0E5]">
-                  Listen to trending books in this months
-                </p>
-              </div>
-              <div className="mt-11 mb-[60px] justify-start">
+        <div className="ml-10 mt-8 pt-9 rounded-3xl bg-[#1AA928] relative overflow-hidden">
+          <Image className="absolute object-contain w-[100%]" src={whitewavy} />
+          <div className="flex">
+            <div className="flex-1 flex-grow relative">
+              <div className="relative ml-10">
+                <h2 className="text-3xl tracking-wider font-bold text-white font-serif">
+                  TRENDING BOOKS
+                </h2>
+                <h2 className="text-3xl tracking-wider font-bold text-white mt-1 font-serif">
+                  THIS MONTH
+                </h2>
                 <div className={nunito.className}>
-                  <Link
-                    href="#"
-                    className=" text-sm rounded-full bg-[#EB763C] pt-4.5 px-7 py-3 font-extrabold text-center text-[#FFFFFF] "
-                  >
-                    VIEW NOW
-                  </Link>
+                  <p className="mt-6 text-lg font-normal leading-8 text-[#DCE0E5]">
+                    Listen to trending books in this months
+                  </p>
+                </div>
+                <div className="mt-11 mb-[60px] justify-start">
+                  <div className={nunito.className}>
+                    <Link
+                      href="#"
+                      className="text-sm rounded-full bg-[#EB763C] pt-4.5 px-7 py-3 font-extrabold text-center text-[#FFFFFF]"
+                    >
+                      VIEW NOW
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
             <div className="flex-auto relative ">
               <Image
-                className="absolute left-[151px] mt-[45px] w-28"
+                className="absolute md:left-[108px] mt-[45px] sm:w-20 lg:w-28"
                 src={dancingman}
               />
-            </div>
-            <div className="flex-auto relative ">
               <Image
-                className="relative right-[68px] w-[291px]"
+                className="absolute sm:w-[250px] lg:w-[291px] "
                 src={flyingbooks}
               />
-            </div>
-            <div className=" ">
               <Image
-                className="relative mt-6 right-[553px] w-[118px]"
+                className="absolute left-[118px] top-[20px] sm:w-[70px] lg:w-[118px]"
                 src={hearts}
               />
             </div>
           </div>
         </div>
+
         <div className={nunito.className}>
           <div className="flex flex-row mt-8 ml-10">
             <h2 className="font-bold text-2xl text-[#303030]">Popular</h2>
@@ -324,7 +321,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="ml-36 rounded-[40px] bg-[#E4FBE7] ">
+      <div className="sm:ml-3 lg:ml-10 rounded-[40px] bg-[#E4FBE7] ">
         <div className={nunito.className}>
           <div className="flex mt-9 ml-8">
             <div className="rounded-full bg-white p-3 pt-2">
@@ -338,15 +335,21 @@ export default function Page() {
               <Image src={dropdown} className="ml-[49px] mr-[17px]" />
             </div>
           </div>
-          <div className="rounded-2xl bg-white ml-[33px] mt-9 mr-[39px] shadow-lg">
-            <div className="flex pt-6">
-              <Image src={sidewavy} className="absolute mt-9" />
-              <Image src={sidegatsby} className="ml-5 mt-1.5 z-10" />
+          <div className="rounded-2xl bg-white ml-[33px] mt-9 mr-[45px] shadow-lg relative overflow-hidden">
+            <Image
+              src={sidewavy}
+              className="absolute mt-14 object-contain w-[100%]"
+            />
+            <div className="relative w-[100%] grid grid-cols-3 gap-x-6 pt-6">
+              <Image
+                src={sidegatsby}
+                className="md:ml-5 mt-6 z-10  object-contain"
+              />
               <Image
                 src={sidewonder}
-                className="z-10 mt-2 ml-[29px] rounded-xl ring-offset-[3px] ring-2 ring-[#27A857]"
+                className="z-10 mt-2  rounded-xl ring-offset-[3px] ring-2 ring-[#27A857] object-contain"
               />
-              <Image src={sideeat} className="z-10 ml-[29px] mt-1.5" />
+              <Image src={sideeat} className="z-10  mt-6 object-contain" />
             </div>
             <h2 className="text-[#333333] mt-[26px] absolute ml-[122px] text-xl font-bold">
               Wonder
